@@ -1,0 +1,259 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Engkantos</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+      <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="style.css">
+      <style>
+
+.content-container {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    gap: 40px;
+}
+
+.left-column {
+    flex: 1;
+    text-align: center;
+}
+
+.left-column .reads-badge {
+    background-color: #FAE7CB;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.left-column .main-image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.right-column {
+    flex: 2;
+}
+
+.right-column .title {
+    font-size: 5rem;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.right-column .author {
+    color: #888;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.right-column .description {
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 1.0rem;
+}
+
+.right-column .buttons a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.right-column .download-btn {
+    background-color: #2B632B;
+}
+
+.right-column .download-btn:hover {
+    background-color: #1E4D28;
+}
+
+.right-column .read-btn {
+    background-color: #98B480;
+}
+
+.right-column .read-btn:hover {
+    background: #2B632B;
+    color: #FAE7CB;
+}
+.bg-img-home {
+    position: relative;
+}
+
+.bg-img-home .content-container {
+    padding-top: 20px; /* Space below the line for content */
+}
+
+.bg-img-home hr {
+    position: absolute;
+    top: 0; /* Stick to the top */
+    left: 0; /* Stick to the left */
+    width: 100%; /* Full width */
+    border: 0; /* Remove default border */
+    height: 7px; /* Define line height */
+    background-color: #7AA874; /* Line color */
+    margin: 0; /* Remove default margin */
+}
+
+.box {
+  flex: 0 0 auto; /* Prevents wrapping */
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%;
+  position: relative;
+  padding: 24px;
+  height: 520px;
+  width: 288px;
+  background: #98B480;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.box-top {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 12px;
+    margin-top: 40px;
+}
+
+.box-image {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: 50% 0%;
+}
+
+      </style>
+  </head>
+  <body>
+      <div class="bg-img">
+          <div class="container">
+            <div class="logo">
+              <img src="MYTHIKOS-removebg-preview 1.png" alt="Logo" />
+          </div>
+            <div class="topnav">
+              <a href="home.html">HOME</a>
+              <a href="#news">MAY-AKDA</a>
+              <a href="#contact">LUGAR</a>
+              <a href="#about">ABOUT</a>
+            </div>
+            <div class="search">
+              <form id="form" role="search">
+                <input type="search" id="query" name="q"
+                 placeholder="Search..."
+                 aria-label="Search through site content">
+                <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="bg-img-home">   
+            <hr>
+            <div class="content-container">
+                <!-- Left Section -->          
+                    <div class="box">
+                        <h5>1.5M Reads</h5>
+                        <div class="box-top">
+                        <img class="box-image" src="Cupid at pysche.png" alt="CUPID AT PYSHCHE">
+                        </div>
+                    </div>
+                    
+    
+                <!-- Right Section -->
+                <div class="right-column">
+                    <h1 class="title">CUPID AT PYSHCHE</h1>
+                    <p class="author">Isinalin sa Filipino Alvin D. Mangaoang</p>
+                    <p class="description">
+                        In die Filippynse mitologie bekee Mariang Makiling, liefdevol bekend as Maria Makiling, 'n plek van eerbied en betekenis. Haar legende is intrinsiek gekoppel aan die skilderagtige berg Makiling in Laguna, Filippyne, en sy word vereer as een van die mees erkende diwaats (anitos) in Filippynse folklore. 
+                    </p>
+                    <div class="buttons">
+                        <a href="#" class="button">Download <i class="fa fa-download"></i></a>
+                        <a href="#" class="read-btn">Basahin</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer">
+                <div class="footer-content">
+                    <div class="left-section">
+                        <div class="image-container">
+                            <img src="logo name footer.png" alt="Left Placeholder">
+                        </div>
+                        <p>Eksplorasyon sa Natatanging Guhit, Kuwento ng Animismo at Nilalang mula sa Tradisyon at Oras na Sinulat</p>
+                    </div>
+                    <div class="middle-section">
+                        <ul class="nav-links">
+                            <li><a href="#">HOME</a></li>
+                            <li><span class="divider-vertical"></span></li>
+                            <li><a href="#">LUGAR</a></li>
+                            <li><span class="divider-vertical"></span></li>
+                            <li><a href="#">MAY-AKDA</a></li>
+                            <li><span class="divider-vertical"></span></li>
+                            <li><a href="#">ABOUT</a></li>
+                        </ul>
+                        <div class="social-icons">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="right-section">
+                        <div class="image-grid">
+                            <div class="grid-item">
+                                <img src="logo footer.png" alt="Right Placeholder 1">
+                            </div>
+                            <div class="grid-item">
+                                <img src="qr.png" alt="Right Placeholder 2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="divider">
+                <div class="row">
+                    <p>© 2024 Engkantos. All rights reserved</p>
+                </div>
+            </div>
+        </footer>    
+
+    
+
+
+    <script>
+      const wrap = document.querySelector('.wrap');
+    const leftBtn = document.querySelector('.left-btn');
+    const rightBtn = document.querySelector('.right-btn');
+
+    let currentTranslate = 0;
+    const cardWidth = 324; // Card width including gap (300px width + 24px gap)
+    const totalCards = wrap.children.length;
+    const maxTranslate = -(cardWidth * (totalCards - 1)); // Maximum slide distance
+
+    leftBtn.addEventListener('click', () => {
+        currentTranslate = Math.min(currentTranslate + cardWidth, 0); // Slide to the right but not beyond the first card
+        wrap.style.transform = `translateX(${currentTranslate}px)`;
+    });
+
+    rightBtn.addEventListener('click', () => {
+        currentTranslate = Math.max(currentTranslate - cardWidth, maxTranslate); // Slide to the left but not beyond the last card
+        wrap.style.transform = `translateX(${currentTranslate}px)`;
+    });
+  </script>
+  
+  </body>
+  </html>
+
+  
