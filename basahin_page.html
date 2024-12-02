@@ -398,16 +398,13 @@
   </div>
  <!-- Main Content with Background -->
  <div class="main-content">
-    <h1>Maria Makiling</h1>
-    <div class="views-likes">
-      180,000 ❤️ &nbsp;&nbsp;&nbsp; 1,500,000 👁️
-    </div>
+    <h1>Loading...</h1>
+    <div class="views-likes" id="book-stats">Loading stats...</div>
   </div>
 <div class="sub-content">
     <p style="align-items: center; justify-content: center;" >Paunang tingin</p>
     <hr>
     <p class="content-text">
-        In Philippine mythology, Mariang Makiling, affectionately known as Maria Makiling, holds a place of reverence and significance. Her legend is tied to the picturesque Mount Makiling in Laguna, Philippines, and she is revered as one of the most widely recognized diwatas (anitos) in Philippine folklore.
       </p>
       <a href="#" class="btn">Basahin ang buong kwento ></a>
       <div class="container">
@@ -427,9 +424,9 @@
                 <input type="text" value="Anonymous" class="user">
         
                 <div class="commentinput">
-                <input type="text" placeholder="Enter comment" class="usercomment">
+                <input type="text" placeholder="Enter comment" class="cm usercomment">
                 <div class="buttons">
-                    <button type="submit" disabled id="publish">Publish</button>
+                    <button type="submit" disabled  id="publish_comment">Publish</button>
                     <div class="notify">
                     <input type="checkbox" class="notifyinput">
                     <span>Notify me</span>
@@ -499,6 +496,8 @@
         </div>
     </div>
 </footer>
+<script type="module" src="basahin.js"></script>
+
 <script>
     "use strict";
 
@@ -511,7 +510,7 @@ const userId = {
 };
 
 const userComment = document.querySelector(".usercomment");
-const publishBtn = document.querySelector("#publish");
+const publishBtn = document.querySelector("#publish_comment");
 const comments = document.querySelector(".comments");
 const userName = document.querySelector(".user");
 
