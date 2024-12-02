@@ -1,34 +1,39 @@
-
-<div class="card">
-          <img src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&fit=crop&w=667&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" alt="Mountain">
-          <div class="info">
-              <h1>Mountain</h1>
-              <p>Lorem Ipsum is simply dummy text from the printing and typesetting industry</p>
-              <button>Read More</button>
+<div class="wrap">
+          <div class="box">
+            <h5>1.5M Reads</h5>
+            <div class="box-top">
+              <img class="box-image" src="Cupid at pysche.png" alt="CUPID AT PYSHCHE">
+              <div class="title-flex">
+                <h3 class="box-title">CUPID AT PYSHCHE</h3>
+                <p class="user-follow-info">Isinalin sa Filipino Alvin D. Mangaoang</p>
+              </div>
+              <p class="description">150,000</p>
+            </div>
+            <a href="#" class="button">Buod</a>
           </div>
-      </div>
-  
-      <div class="card">
-          <img src="https://images.unsplash.com/photo-1425342605259-25d80e320565?auto=format&fit=crop&w=750&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" alt="Road">
-          <div class="info">
-              <h1>Road</h1>
-              <p>Lorem Ipsum is simply dummy text from the printing and typesetting industry</p>
-              <button>Read More</button>
+          <div class="box">
+            <h5>1.5M Reads</h5>
+            <div class="box-top">
+             
+              <img class="box-image" src="Liongo.png" alt="Liongo">
+              <div class="title-flex">
+                <h3 class="box-title">LIONGO</h3>
+                <p class="user-follow-info">Isinalin sa Filipino ni Roderic P. Urgellers</p>
+              </div>
+              <p class="description">150,000</p>
+            </div>
+            <a href="#" class="button">Buod</a>
           </div>
-      </div>
-  
-      <div class="card">
-          <img src="https://images.unsplash.com/photo-1503249023995-51b0f3778ccf?auto=format&fit=crop&w=311&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" alt="Protester">
-          <div class="info">
-              <h1>Protester</h1>
-              <p>Lorem Ipsum is simply dummy text from the printing and typesetting industry</p>
-              <button>Read More</button>
+          <div class="box">
+            <h5>1.5M Reads</h5>
+            <div class="box-top">
+              
+              <img class="box-image" src="thor at loki.png" alt="THOR AT LOKI SA LUPAIN NG MGA HIGANTE">
+              <div class="title-flex">
+                <h3 class="box-title">THOR AT LOKI SA LUPAIN NG MGA HIGANTE</h3>
+                <p class="user-follow-info">Isinilaysay ni Justin Carlos G. Villanueva</p>
+              </div>
+              <p class="description">150,000</p>
+            </div>
+            <a href="#" class="button">Buod</a>
           </div>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1503249023995-51b0f3778ccf?auto=format&fit=crop&w=311&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" alt="Protester">
-        <div class="info">
-            <h1>Protester</h1>
-            <p>Lorem Ipsum is simply dummy text from the printing and typesetting industry</p>
-            <button>Read More</button>
-        </div>

@@ -37,52 +37,19 @@
         <h1>Rekomendasyon</h1>
         <hr>
     </div>
-    <div class="wrap-container">
-        <div class="wrap">
-          <div class="box">
-            <h5>1.5M Reads</h5>
-            <div class="box-top">
-              <img class="box-image" src="Cupid at pysche.png" alt="CUPID AT PYSHCHE">
-              <div class="title-flex">
-                <h3 class="box-title">CUPID AT PYSHCHE</h3>
-                <p class="user-follow-info">Isinalin sa Filipino Alvin D. Mangaoang</p>
-              </div>
-              <p class="description">150,000</p>
-            </div>
-            <a href="#" class="button">Buod</a>
-          </div>
-          <div class="box">
-            <h5>1.5M Reads</h5>
-            <div class="box-top">
-             
-              <img class="box-image" src="Liongo.png" alt="Liongo">
-              <div class="title-flex">
-                <h3 class="box-title">LIONGO</h3>
-                <p class="user-follow-info">Isinalin sa Filipino ni Roderic P. Urgellers</p>
-              </div>
-              <p class="description">150,000</p>
-            </div>
-            <a href="#" class="button">Buod</a>
-          </div>
-          <div class="box">
-            <h5>1.5M Reads</h5>
-            <div class="box-top">
-              
-              <img class="box-image" src="thor at loki.png" alt="THOR AT LOKI SA LUPAIN NG MGA HIGANTE">
-              <div class="title-flex">
-                <h3 class="box-title">THOR AT LOKI SA LUPAIN NG MGA HIGANTE</h3>
-                <p class="user-follow-info">Isinilaysay ni Justin Carlos G. Villanueva</p>
-              </div>
-              <p class="description">150,000</p>
-            </div>
-            <a href="#" class="button">Buod</a>
-          </div>
+    
+    <div class="wrap-container" >
+      <div id="loading-spinner" class="loading-spinner"></div>
+    
+      <div class="wrap" id="book-container">
+
+        </div>
         
           
-        </div>
         <div class="button-container">
           <img src="left.png" alt="Slide Left" class="slide-btn left-btn">
           <img src="right.png" alt="Slide Right" class="slide-btn right-btn">
+          </div>
       </div>
     </div>
     </div>
@@ -94,48 +61,9 @@
       Tuklasin and iba pang kwento
      </h4>
     </div>
-    <div class="wrapper">
-      <div class="card">
-          <img src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&fit=crop&w=667&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" alt="Mountain">
-          <div class="info">
-              <h1>Mountain</h1>
-              <p>Lorem Ipsum is simply dummy text from the printing and typesetting industry</p>
-              <button>Read More</button>
-          </div>
-      </div>
-  
-      <div class="card">
-          <img src="https://images.unsplash.com/photo-1425342605259-25d80e320565?auto=format&fit=crop&w=750&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" alt="Road">
-          <div class="info">
-              <h1>Road</h1>
-              <p>Lorem Ipsum is simply dummy text from the printing and typesetting industry</p>
-              <button>Read More</button>
-          </div>
-      </div>
-  
-      <div class="card">
-          <img src="https://images.unsplash.com/photo-1503249023995-51b0f3778ccf?auto=format&fit=crop&w=311&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" alt="Protester">
-          <div class="info">
-              <h1>Protester</h1>
-              <p>Lorem Ipsum is simply dummy text from the printing and typesetting industry</p>
-              <button>Read More</button>
-          </div>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1503249023995-51b0f3778ccf?auto=format&fit=crop&w=311&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" alt="Protester">
-        <div class="info">
-            <h1>Protester</h1>
-            <p>Lorem Ipsum is simply dummy text from the printing and typesetting industry</p>
-            <button>Read More</button>
-        </div>
+    <div class="wrapper" id="bikol-books-container">
     </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1503249023995-51b0f3778ccf?auto=format&fit=crop&w=311&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" alt="Protester">
-      <div class="info">
-          <h1>Protester</h1>
-          <p>Lorem Ipsum is simply dummy text from the printing and typesetting industry</p>
-          <button>Read More</button>
-      </div>
+      
   </div>
   </div>
   <div class="mitolohiya-section">
@@ -204,9 +132,12 @@
         </div>
     </div>
 </footer>
-<script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-analytics.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js"></script>
+
+  <script type="module" src="scripts.js"></script>
+
+
 
 
     <script>
