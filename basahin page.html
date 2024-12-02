@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engkantos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Navbar styles */
+    .navbar {
+      background-color: #2B632B;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      font-family: Arial, sans-serif;
+      height: 70px;
+    }
+    .logo{
+        margin-bottom: 20px;
+    }
+
+    .navbar .logo img {
+      height: 40px;
+      width: auto;
+      margin-left: 70px;
+    }
+
+    .navbar .nav-links {
+      display: flex;
+      gap: 70px;
+    }
+
+    .navbar .nav-links a {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .navbar .nav-links a:hover {
+      color: #FAE7CB;
+    }
+
+    .navbar .search-bar {
+      display: flex;
+      align-items: center;
+      border: 1px solid white;
+      border-radius: 20px;
+      padding: 5px;
+      margin-right: 50px;
+    }
+
+    .navbar .search-bar input {
+      border: none;
+      background: transparent;
+      color: white;
+      padding: 5px;
+      outline: none;
+      width: 300px;
+    }
+
+    .navbar .search-bar i {
+      color: white;
+      margin-left: 10px;
+    }
+
+    /* Main section with background image */
+    .main-content {
+      max-width: 100%;
+      font-family: Arial, sans-serif;
+      background: url('genre.png') no-repeat center center;
+      background-size: cover;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      border-radius: 10px;
+      position: relative;
+    }
+
+    .main-content h1 {
+      font-size: 3rem;
+      color: #fff;
+    }
+
+    .main-content .views-likes {
+      color: white;
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .main-content .content-text {
+      margin: 20px auto;
+      line-height: 1.6;
+      color: white;
+      max-width: 800px;
+    }
+
+    .main-content .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #2B632B;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .main-content .btn:hover {
+      background-color: #1E4D28;
+    }
+    .sub-content {
+    background: white;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 51%);
+    margin: -50px auto 20px auto;
+    padding: 30px 80px;
+    max-width: 1100px;
+    font-family: Arial, sans-serif;
+    z-index: 1;
+}
+
+.sub-content .content-text {
+    margin: 20px 0;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+    font-size: 13px;
+}
+
+.sub-content .btn {
+
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #2B632B;
+      color: #FAE7CB;
+      text-decoration: none;
+      border-radius: 20px;
+      font-weight: bold;
+      border: 2px solid transparent;
+      transition: background 0.3s, border 0.3s, color 0.3s;
+      display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 400px;
+    
+    }
+    .sub-content .btn:hover {
+      background-color: rgba(250, 231, 203, 0.51);
+      border: 2px solid #FAE7CB;
+      color: #2B632B;
+    }
+   
+
+    /* QR Code Section */
+    .qr-section {
+      text-align: center;
+      margin-top: 20px;
+      color: #555;
+    }
+
+    .qr-section img {
+      margin-top: 10px;
+      width: 100px;
+      height: 100px;
+    }
+    /* Footer */
+    .footer {
+      background-color: #2B632B;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .footer .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 10px;
+    }
+
+    .footer .footer-links a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    .footer .social-icons a {
+      color: white;
+      margin: 0 10px;
+    }
+
+    .footer .social-icons a:hover {
+      color: #FAE7CB;
+    }
+
+    /* You may also like */
+    .related-section {
+      margin: 20px auto;
+      max-width: 800px;
+      text-align: center;
+    }
+
+    .related-section h2 {
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+    }
+
+    .related-section .related-items {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .related-section .related-item img {
+      width: 100px;
+      height: 100px;
+      border-radius: 10px;
+    }
+    p {
+    font-size: 1.3em;
+    line-height: 1.5;
+    font-weight: 800;
+    color: #AF6A63;
+    align-items: center;
+    text-align: center;
+}
+
+    .sub-content hr {
+      border: none;
+      border-top: 1px solid rgba(186, 186, 186, 0.37);
+      margin: 20px 0;
+    }
+    .container {
+  background: #fff;
+  padding: 20px;
+  font-family: monospace;
+  width: 900px;
+  box-shadow: 0 0 5px #000;
+}
+
+.head {
+  text-transform: uppercase;
+}
+
+.text {
+  margin: 10px 0;
+  font-family: sans-serif;
+  font-size: 0.9em;
+}
+
+.commentbox {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+.commentbox > img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 20px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.content {
+  width: 100%;
+}
+.user {
+  border: none;
+  outline: none;
+  margin: 5px 0;
+  color: #808080;
+  margin-left: 20px;
+  padding: 10px;
+}
+
+.commentinput > input {
+  border: none;
+  padding: 10px;
+  padding-left: 0;
+  outline: none;
+  border-bottom: 2px solid blue;
+  margin-bottom: 10px;
+  width: 95%;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+      color: #FAE7CB;
+      text-decoration: none;
+      border-radius: 20px;
+      font-weight: bold;
+      border: 2px solid transparent;
+      transition: background 0.3s, border 0.3s, color 0.3s;
+}
+.buttons button.abled {
+    background-color: rgba(250, 231, 203, 0.51);
+      border: 2px solid #FAE7CB;
+      color: #2B632B;
+}
+
+
+.buttons > button {
+  padding: 5px 10px;
+  background: lightgrey;
+  color: #808080;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.policy {
+  margin: 20px 0;
+  font-size: 0.8em;
+  font-family: Arial, sans-serif;
+  color: #808080;
+}
+
+.policy a {
+  text-decoration: none;
+  color: blue;
+}
+
+.notify {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.notify > input {
+  margin-right: 5px;
+}
+.parents {
+  font-family: Arial, sans-serif;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.parents h1 {
+  font-size: 0.9em;
+}
+.parents p {
+  margin: 10px 0;
+  font-size: 0.9em;
+}
+
+.parents > img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 20px;
+  object-fit: cover;
+  object-position: center;
+}
+.engagements {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.engagements img {
+  width: 20px;
+}
+.engagements img:nth-child(1) {
+  margin-right: 10px;
+  width: 25px;
+}
+
+.date {
+  color: #808080;
+  font-size: 0.8em;
+}
+
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="logo name footer.png" alt="Engkantos Logo">
+    </div>
+    <div class="nav-links">
+      <a href="#home">HOME</a>
+      <a href="#may-akda">MAY-AKDA</a>
+      <a href="#lugar">LUGAR</a>
+      <a href="#about">ABOUT</a>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+      <i class="fa fa-search"></i>
+    </div>
+  </div>
+ <!-- Main Content with Background -->
+ <div class="main-content">
+    <h1>Maria Makiling</h1>
+    <div class="views-likes">
+      180,000 ❤️ &nbsp;&nbsp;&nbsp; 1,500,000 👁️
+    </div>
+  </div>
+<div class="sub-content">
+    <p style="align-items: center; justify-content: center;" >Paunang tingin</p>
+    <hr>
+    <p class="content-text">
+        In Philippine mythology, Mariang Makiling, affectionately known as Maria Makiling, holds a place of reverence and significance. Her legend is tied to the picturesque Mount Makiling in Laguna, Philippines, and she is revered as one of the most widely recognized diwatas (anitos) in Philippine folklore.
+      </p>
+      <a href="#" class="btn">Basahin ang buong kwento ></a>
+      <div class="container">
+            <div class="head">
+            <h1>Mag-iwan ng komento</h1>
+            </div>
+        
+            <div>
+            <span id="comment">0</span> Komento
+            </div>
+            <div class="comments"></div>
+        
+            <div class="commentbox">
+            <img src="user_4_fill.png" alt="">
+            <div class="content">
+                <h2>Mag komento bilang:</h2>
+                <input type="text" value="Anonymous" class="user">
+        
+                <div class="commentinput">
+                <input type="text" placeholder="Enter comment" class="usercomment">
+                <div class="buttons">
+                    <button type="submit" disabled id="publish">Publish</button>
+                    <div class="notify">
+                    <input type="checkbox" class="notifyinput">
+                    <span>Notify me</span>
+                    </div>
+                </div>
+                </div>
+                <p class="policy">
+                    This site is protected by reCAPTCHA and the Google 
+                    <a href="">privacy policy</a> and 
+                    <a href="">Terms of Service</a>apply.
+                  </p>
+            </div>
+            </div>
+        </div>
+      
+
+      <!-- QR Code Section -->
+      <div class="qr-section">
+        <img src="qr.png" alt="QR Code">
+      </div>
+    
+</div>
+  
+  <!-- Related Section -->
+  
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer">
+        <div class="footer-content">
+            <div class="left-section">
+                <div class="image-container">
+                    <img src="logo name footer.png" alt="Left Placeholder">
+                </div>
+                <p>Eksplorasyon sa Natatanging Guhit, Kuwento ng Animismo at Nilalang mula sa Tradisyon at Oras na Sinulat</p>
+            </div>
+            <div class="middle-section">
+                <ul class="nav-links">
+                    <li><a href="#">HOME</a></li>
+                    <li><span class="divider-vertical"></span></li>
+                    <li><a href="#">LUGAR</a></li>
+                    <li><span class="divider-vertical"></span></li>
+                    <li><a href="#">MAY-AKDA</a></li>
+                    <li><span class="divider-vertical"></span></li>
+                    <li><a href="#">ABOUT</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="image-grid">
+                    <div class="grid-item">
+                        <img src="logo footer.png" alt="Right Placeholder 1">
+                    </div>
+                    <div class="grid-item">
+                        <img src="qr.png" alt="Right Placeholder 2">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="divider">
+        <div class="row">
+            <p>© 2024 Engkantos. All rights reserved</p>
+        </div>
+    </div>
+</footer>
+<script>
+    "use strict";
+
+const userId = {
+  name: null,
+  identity: null,
+  image: null,
+  message: null,
+  date: null
+};
+
+const userComment = document.querySelector(".usercomment");
+const publishBtn = document.querySelector("#publish");
+const comments = document.querySelector(".comments");
+const userName = document.querySelector(".user");
+
+userComment.addEventListener("input", e => {
+  if (!userComment.value) {
+    publishBtn.setAttribute("disabled", "disabled");
+    publishBtn.classList.remove("abled");
+  } else {
+    publishBtn.removeAttribute("disabled");
+    publishBtn.classList.add("abled")
+  }
+});
+
+function addPost() {
+  console.log("The button works!");
+  if (!userComment.value) return;
+
+  userId.name = userName.value;
+
+  if (userId.name === "Anonymous") {
+    userId.identity = false;
+    userId.image = "anonymous.png";
+  } else {
+    userId.identity = true;
+    userId.image = "user_4_fill.png";
+  }
+
+  userId.message = userComment.value;
+  userId.date = new Date().toLocaleString();
+
+  let published = `
+    <div class="parents">
+  <img src="${userId.image}">
+  <div>
+    <h1>${userId.name}</h1>
+    <p>${userId.message}</p>
+    <div class="engagements">
+      <img src="like.png">
+      <img src="share.png">
+    </div>
+    <span class="date">${userId.date}</span>
+  </div>
+</div>`;
+comments.innerHTML += published;
+userComment.value = "";
+let commentsNum = document.querySelectorAll(".parents").length;
+document.getElementById("comment").textContent = commentsNum;
+
+}
+
+
+publishBtn.addEventListener("click",addPost)
+</script>
+</body>
+</html>
