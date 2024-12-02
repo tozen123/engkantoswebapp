@@ -91,13 +91,18 @@ document.addEventListener("DOMContentLoaded", fetchBooks);
 
 async function fetchBikolBooks() {
     const bikolBooksContainer = document.getElementById('bikol-books-container');
+    const loadingSpinner = document.getElementById('bikol-loading-spinner');
+    
     if (!bikolBooksContainer) {
         console.error("Element with ID 'bikol-books-container' not found.");
         return;
     }
 
+    // Show the loading spinner
+    loadingSpinner.style.display = "block";
+
     try {
-        const querySnapshot = await getDocs(collection(db, 'books')); // Adjust collection if needed
+        const querySnapshot = await getDocs(collection(db, 'books')); 
         querySnapshot.forEach((docSnapshot) => {
             const book = docSnapshot.data();
 
@@ -119,9 +124,11 @@ async function fetchBikolBooks() {
         });
     } catch (error) {
         console.error("Error fetching Bikol books:", error);
+    } finally {
+        // Hide the loading spinner after loading is complete
+        loadingSpinner.style.display = "none";
     }
 }
-
 
 
 // Call fetchBikolBooks once the DOM is fully loaded
