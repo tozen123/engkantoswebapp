@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engkantos</title>
+  <link rel="stylesheet" href="styles_reader.css">
+</head>
+<body>
+  <div class="reader-container">
+
+    <header class="header">
+      <h1 id="book-title">Loading...</h1>
+    </header>
+    <div id="loading-spinner" class="loading">Loading book, please wait...</div>
+    <div class="pdf-viewer" id="pdf-container"></div>
+    <div id="like-panel" class="like-panel" style="display: none;">
+      <h2>Do you like the book?</h2>
+      <button id="like-button" class="like-button">❤️ Like</button>
+    </div>
+    <div id="home-panel" class="home-panel" style="display: none;">
+      <button id="home-button" class="home-button">🏠 Go Back to Home</button>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js"></script>
+  <script type="module" src="reader.js"></script>
+</body>
+</html>

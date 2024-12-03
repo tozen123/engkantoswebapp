@@ -33,7 +33,16 @@ async function loadBookDetails() {
                 mainContentTitle.textContent = book.name || "No Title";
                 statsElement.textContent = `${book.hearts || 0} ❤️ | ${book.reads || 0} 👁️`;
                 descriptionElement.textContent = book.bookDescription || "No description available.";
-                readBtn.href = book.bookPdf || "#";
+                
+                if (book.bookPdf) {
+                    readBtn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        window.location.href = `read_book.html?bookId=${encodeURIComponent(bookId)}`;
+                    });
+                } else {
+                    readBtn.style.display = "none"; // Hide the button if no PDF is available
+                }
+
             });
         } else {
             console.error("No book found with the provided bookId.");
@@ -100,7 +109,7 @@ async function addComment() {
         return;
     }
 
-    const userComment = userCommentElement.value.trim(); // Ensure no extra spaces
+    const userComment = userCommentElement.value; // Ensure no extra spaces
     const userName = document.querySelector(".user")?.value.trim() || "Anonymous";
     const userImage = userName === "Anonymous" ? "anonymous.png" : "user_4_fill.png";
 
@@ -142,7 +151,6 @@ async function addComment() {
 
 // Event listener for the publish button
 document.getElementById("publish_comment").addEventListener("click", () => {
-    console.log("Publish button clicked");
     addComment();
 });
 

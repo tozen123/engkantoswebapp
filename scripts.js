@@ -66,9 +66,11 @@ async function fetchBooks() {
 
             // Add event listener for redirection
             const button = box.querySelector('.button');
-            button.addEventListener('click', (e) => {
+            button.addEventListener('click', async  (e) => {
                 e.preventDefault(); // Prevent default anchor behavior
+                await incrementReads(book.id); // Increment reads count
                 window.location.href = `genre_details.html?bookId=${book.id}`;
+                
             });
 
             // Append the box to the container
