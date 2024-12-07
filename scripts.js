@@ -69,7 +69,7 @@ async function fetchBooks() {
             button.addEventListener('click', async  (e) => {
                 e.preventDefault(); // Prevent default anchor behavior
                 await incrementReads(book.id); // Increment reads count
-                window.location.href = `genre_details.html?bookId=${book.id}`;
+                window.location.href = `mitolohiya_details.html?bookId=${book.id}`;
                 
             });
 
