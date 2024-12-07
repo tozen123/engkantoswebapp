@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Engkantos - Explore captivating stories and mythology from Bikol. Dive into tales of Animism, traditions, and myths through our curated library.">
+  <meta name="keywords" content="Engkantos, Mitolohiyang Bikol, Animism, Filipino Folklore, Filipino Mythology, Philippine Stories">
+  <meta name="author" content="Engkantos Team">
+  <meta property="og:title" content="Engkantos - Discover Bikol Mythology and Stories">
+  <meta property="og:description" content="Explore captivating stories and mythology from Bikol. Dive into tales of Animism, traditions, and myths through our curated library.">
+  <meta property="og:image" content="https://engkantos.com/logo%20footer.png">
+  <meta property="og:url" content="https://www.engkantos.com">
+  <meta name="twitter:card" content="https://engkantos.com/logo%20footer.png">
+  <meta name="twitter:title" content="Engkantos - Discover Bikol Mythology and Stories">
+  <meta name="twitter:description" content="Explore captivating stories and mythology from Bikol. Dive into tales of Animism, traditions, and myths through our curated library.">
+  <meta name="twitter:image" content="https://engkantos.com/logo%20footer.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Engkantos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <!--FONT AWESOME-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        section {
+  position: relative;
+  background-color: #272727; /* Sets the background to black */
+  color: #fff; /* Adjusts text color to ensure visibility on black background */
+  padding: 50px 0; /* Adds some spacing */
+}
+
+
+        .author-cards-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 40px 0;
+  justify-content: flex-end; /* Align the author cards to the right */
+}
+
+.author-card {
+  position: relative;
+  width: 280px;
+  height: 400px;
+  background: rgb(53, 83, 53);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  margin: 15px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(50px);
+  border: 5px solid #2B632B; /* Add a green border */
+  transition: transform 0.3s ease; /* Add smooth transition */
+}
+
+.author-card:hover{
+    backdrop-filter: blur(0px); /* Clear the blur on hover */
+    background: rgb(77, 84, 77);
+    transform: scale(1.1); /* Slightly scale up the card on hover */
+}
+.author-card .author-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.author-card:hover .author-content {
+  opacity: 1;
+  transform: translateY(-20px);
+  background: rgb(77, 84, 77);
+
+}
+
+.author-card .author-imgBx {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 10px solid rgba(0, 0, 0, 0.25);
+}
+
+.author-card .author-imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.author-card .author-contentBx h3 {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0 10px;
+  line-height: 1.1em;
+}
+
+.author-card .author-contentBx h3 span {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: initial;
+}
+
+.author-card .author-sci {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+}
+
+.author-card .author-sci li {
+  list-style: none;
+  margin: 0 10px;
+  transform: translateY(40px);
+  transition: 0.5s;
+  transition-delay: calc(0.1s * var(--i));
+}
+
+.author-card:hover .author-sci li {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.author-card .author-sci li a {
+  color: #fff;
+  font-size: 24px;
+}
+/* Title styling */
+.title {
+    font-family: 'Arial', sans-serif; /* or any other font you prefer */
+    font-size: 50px; /* Adjust size as needed */
+    font-weight: bold;
+    color: #fff; /* White text color */
+    text-transform: uppercase; /* Capitalize all letters */
+    letter-spacing: 2px; /* Increase space between letters */
+    padding: 10px 20px; /* Add some padding to make the title more prominent */
+    border-radius: 15px; /* Rounded corners for the background */
+    display: inline-block; /* Make sure the title is not taking the whole width */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    margin: 20px;
+}
+
+/* Hover effect to give a dynamic feel */
+.title i:hover {
+    transform: scale(1.1); /* Slightly scale up the title on hover */
+}
+
+.title i {
+    font-family: 'Arial', sans-serif; /* or any other font you prefer */
+    font-size: 50px; /* Adjust size as needed */
+    font-weight: bold;
+    color: #fff; /* White text color */
+    text-transform: uppercase; /* Capitalize all letters */
+    letter-spacing: 2px; /* Increase space between letters */
+    padding: 10px 20px; /* Add some padding to make the title more prominent */
+    border-radius: 15px; /* Rounded corners for the background */
+    display: inline-block; /* Make sure the title is not taking the whole width */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    margin: 20px;
+    margin-right: 10px; /* Adjust the space between the icon and the title text */
+    font-size: 45px; /* Adjust icon size as needed */
+}
+
+    </style>
+</head>
+<body>
+    <div class="bg-img">
+        <div class="container">
+          <div class="logo">
+            <img src="MYTHIKOS-removebg-preview 1.png" alt="Logo" />
+        </div>
+          <div class="topnav">
+            <a href="index.html">HOME</a>
+            <a href="mitolohiya page.html">MITOLOHIYA</a>
+            <a href="May Akda.html">MAY-AKDA</a>
+            <a href="about.html">ABOUT</a>
+          </div>
+          <div class="search">
+            <form id="form" role="search">
+              <input type="search" id="query" name="q"
+               placeholder="Search..."
+               aria-label="Search through site content">
+              <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
+            </form>
+          </div>
+        </div>
+      </div>
+      <section>
+        <h1 class="title" class="fa fa-user" >May-Akda</h1>
+        
+        <div class="author-cards-container">
+          <div class="author-card">
+            <div class="author-content">
+              <div class="author-imgBx">
+                <img src="KRISTINE A. PURGANAN. PURGANAN. PURGANAN" alt="Author Image">
+              </div>
+              <div class="author-contentBx">
+                <h3>KRISTINE A. PURGANAN<br><span>May-Akda</span></h3>
+              </div>
+            </div>
+            <ul class="author-sci">
+              <li style="--i:1">
+                <a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+              </li>
+              <li style="--i:2">
+                <a href="https://www.facebook.com/kristine.purganan.14?mibextid=ZbWKwL
+                "><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+          </div>
+      
+          <div class="author-card">
+            <div class="author-content">
+              <div class="author-imgBx">
+                <img src="DANICA C. SAMAN. SAMAN. SAMAN" alt="Author Image">
+              </div>
+              <div class="author-contentBx">
+                <h3>DANICA C. SAMAN<br><span>May-Akda</span></h3>
+              </div>
+            </div>
+            <ul class="author-sci">
+              <li style="--i:1">
+                <a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+              </li>
+              <li style="--i:2">
+                <a href="https://www.facebook.com/danica.saman?mibextid=LQQJ4d"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+          </div>
+      
+          <div class="author-card">
+            <div class="author-content">
+              <div class="author-imgBx">
+                <img src="TAGAPAYO.jfif" alt="Author Image">
+              </div>
+              <div class="author-contentBx">
+                <h3>Edwin R. Ichiano, PhD<br><span>Tagapayo</span></h3>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+      
+
+<footer>
+  <div class="footer">
+      <div class="footer-content">
+          <div class="left-section">
+              <div class="image-container">
+                  <img src="logo name footer.png" alt="Left Placeholder">
+              </div>
+              <p>E-kagamitang Naglalaman ng mga Guhit ng Komiks At Natatanging Kuwento Tungkol sa mga diyos at diyosa tungo sa isang Obra-maestra.</p>
+          </div>
+          <div class="middle-section">
+              <ul class="nav-links">
+                  <li><a href="#">HOME</a></li>
+                  <li><span class="divider-vertical"></span></li>
+                  <li><a href="mitolohiya page.html">MITOLOHIYA</a></li>
+                  <li><span class="divider-vertical"></span></li>
+                  <li><a href="May Akda.html">MAY-AKDA</a></li>
+                  <li><span class="divider-vertical"></span></li>
+                  <li><a href="about.html">ABOUT</a></li>
+              </ul>
+              <div class="social-icons">
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-instagram"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+              </div>
+          </div>
+          <div class="right-section">
+              <div class="image-grid">
+                  <div class="grid-item">
+                      <img src="logo footer.png" alt="Right Placeholder 1">
+                  </div>
+                  <div class="grid-item">
+                      <img src="qr.png" alt="Right Placeholder 2">
+                  </div>
+              </div>
+          </div>
+      </div>
+      <hr class="divider">
+      <div class="row">
+          <p>© 2024 Engkantos. All rights reserved</p>
+      </div>
+  </div>
+</footer>
+<script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js"></script>
+
+<script type="module" src="scripts.js"></script>
+
+
+
+
+  <script>
+    const wrap = document.querySelector('.wrap');
+  const leftBtn = document.querySelector('.left-btn');
+  const rightBtn = document.querySelector('.right-btn');
+
+  let currentTranslate = 0;
+  const cardWidth = 324; // Card width including gap (300px width + 24px gap)
+  const totalCards = wrap.children.length;
+  const maxTranslate = -(cardWidth * (totalCards - 1)); // Maximum slide distance
+
+  leftBtn.addEventListener('click', () => {
+      currentTranslate = Math.min(currentTranslate + cardWidth, 0); // Slide to the right but not beyond the first card
+      wrap.style.transform = `translateX(${currentTranslate}px)`;
+  });
+
+  rightBtn.addEventListener('click', () => {
+      currentTranslate = Math.max(currentTranslate - cardWidth, maxTranslate); // Slide to the left but not beyond the last card
+      wrap.style.transform = `translateX(${currentTranslate}px)`;
+  });
+</script>
+
+</body>
+</html>
+
