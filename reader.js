@@ -15,11 +15,9 @@ async function loadBookPdf() {
 
   const pdfContainer = document.getElementById("pdf-container");
   const loadingSpinner = document.getElementById("loading-spinner");
-  const likePanel = document.getElementById("like-panel");
   const likeButton = document.getElementById("like-button");
-  const homePanel = document.getElementById("home-panel");
-  const homeButton = document.getElementById("home-button");
   const bookTitle = document.getElementById("book-title");
+  const exitIcon = document.querySelector(".exit-icon");
 
   if (!bookId) {
     bookTitle.textContent = "Error: No book ID provided.";
@@ -51,10 +49,6 @@ async function loadBookPdf() {
       renderPage(page, pdfContainer);
     }
 
-    // Show panels after rendering all pages
-    likePanel.style.display = "block";
-    homePanel.style.display = "block";
-
     // Increment hearts on like button click
     likeButton.addEventListener("click", async () => {
       try {
@@ -67,9 +61,9 @@ async function loadBookPdf() {
       }
     });
 
-    // Redirect to home on home button click
-    homeButton.addEventListener("click", () => {
-      window.location.href = "index.html"; // Replace with your actual home page path
+    // Redirect to basahin_page.html when the exit icon is clicked
+    exitIcon.addEventListener("click", () => {
+      window.location.href = `basahin_page.html?bookId=${bookId}`;
     });
   } catch (error) {
     console.error("Error loading book PDF:", error);
