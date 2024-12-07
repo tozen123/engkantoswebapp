@@ -18,6 +18,9 @@ async function incrementReads(bookId) {
         console.error("Error incrementing reads count:", error);
     }
 }
+
+
+
 async function fetchBooks() {
     const bookContainer = document.getElementById('book-container');
     const loadingSpinner = document.getElementById('loading-spinner');
@@ -61,12 +64,13 @@ async function fetchBooks() {
                 <a href="#" class="button">Buod</a>
             `;
 
-            // Add event listener for reads count and open book
+            // Add event listener for redirection
             const button = box.querySelector('.button');
-            button.addEventListener('click', (e) => {
+            button.addEventListener('click', async  (e) => {
                 e.preventDefault(); // Prevent default anchor behavior
-                incrementReads(book.id); // Increment reads count
-                openBook(book.bookPdf); // Open the book
+                await incrementReads(book.id); // Increment reads count
+                window.location.href = `mitolohiya_details.html?bookId=${book.id}`;
+                
             });
 
             // Append the box to the container
@@ -80,24 +84,24 @@ async function fetchBooks() {
     }
 }
 
-
-function openBook(pdfUrl) {
-    window.open(pdfUrl, '_blank');
-}
-
 // Call fetchBooks once the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", fetchBooks);
 
 
 async function fetchBikolBooks() {
     const bikolBooksContainer = document.getElementById('bikol-books-container');
+    const loadingSpinner = document.getElementById('bikol-loading-spinner');
+    
     if (!bikolBooksContainer) {
         console.error("Element with ID 'bikol-books-container' not found.");
         return;
     }
 
+    // Show the loading spinner
+    loadingSpinner.style.display = "block";
+
     try {
-        const querySnapshot = await getDocs(collection(db, 'books')); // Adjust collection if needed
+        const querySnapshot = await getDocs(collection(db, 'books')); 
         querySnapshot.forEach((docSnapshot) => {
             const book = docSnapshot.data();
 
@@ -119,9 +123,11 @@ async function fetchBikolBooks() {
         });
     } catch (error) {
         console.error("Error fetching Bikol books:", error);
+    } finally {
+        // Hide the loading spinner after loading is complete
+        loadingSpinner.style.display = "none";
     }
 }
-
 
 
 // Call fetchBikolBooks once the DOM is fully loaded
