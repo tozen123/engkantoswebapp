@@ -104,13 +104,10 @@ padding-bottom: 100px;
 
 .wrap {
 display: flex;
-justify-content: space-between;
-  align-items: center;
 flex-wrap: wrap;
 gap: 24px;
 padding: 24px;
 border-radius: 10px;
-margin: 0 10%;
 padding: 20px;
 
 }
@@ -319,7 +316,8 @@ transform: scale(0.95);
             <img src="MYTHIKOS-removebg-preview 1.png" alt="Logo" />
         </div>
           <div class="topnav">
-            <a href="#home">HOME</a>
+            <a href="index.html">HOME</a>
+
             <a href="#news">MAY-AKDA</a>
             <a href="mitolohiya page.html">MITOLOHIYA</a>
             <a href="#about">ABOUT</a>
@@ -339,7 +337,6 @@ transform: scale(0.95);
       <h1>Mitolohiya</h1>
       <hr>
   </div>
-    <!-- Filter Menus -->
     <div class="filter-menu">
       <span class="filter-label">Filter by Likes:</span>
       <select id="likesFilter" class="filter-dropdown">
@@ -347,127 +344,22 @@ transform: scale(0.95);
           <option value="100">100 ❤️</option>
           <option value="200">200 ❤️</option>
           <option value="300">300 ❤️</option>
-          <!-- Add more options as needed -->
       </select>
 
       <span class="filter-label">Filter by Views:</span>
       <select id="viewsFilter" class="filter-dropdown">
           <option value="all">All</option>
-          <option value="500000">500K Reads</option>
-          <option value="1000000">1M Reads</option>
-          <option value="1500000">1.5M Reads</option>
-          <!-- Add more options as needed -->
+          <option value="100">100 Reads</option>
+          <option value="10000">10K Reads</option>
+          <option value="100000">100K Reads</option>
       </select>
   </div>
 
 
   <div class="wrap-container">
       <div class="wrap" id="card-container">
-        <div class="box" data-likes="300" data-views="1500000">
-          <h5>1.5M Reads</h5>
-          <div class="box-top">
-              <img class="box-image" src="Cupid at pysche.png" alt="CUPID AT PSYCHE">
-              <div class="title-flex">
-                  <h3 class="box-title">CUPID AT PSYCHE</h3>
-                  <p class="user-follow-info">Isinalin sa Filipino ni Alvin D. Mangaoang</p>
-              </div>
-              <p class="description">300 ❤️</p>
-          </div>
-          <a href="Genre Details.html" class="button">Buod</a>
-      </div>
-      <!-- Card 2 -->
-      <div class="box" data-likes="200" data-views="1000000">
-          <h5>1M Reads</h5>
-          <div class="box-top">
-              <img class="box-image" src="Liongo.png" alt="Liongo">
-              <div class="title-flex">
-                  <h3 class="box-title">LIONGO</h3>
-                  <p class="user-follow-info">Isinalin sa Filipino ni Roderic P. Urgellers</p>
-              </div>
-              <p class="description">200 ❤️</p>
-          </div>
-          <a href="#" class="button">Buod</a>
-      </div>
-      <!-- Card 3 -->
-      <div class="box" data-likes="100" data-views="500000">
-          <h5>500K Reads</h5>
-          <div class="box-top">
-              <img class="box-image" src="thor at loki.png" alt="THOR AT LOKI SA LUPAIN NG MGA HIGANTE">
-              <div class="title-flex">
-                  <h3 class="box-title">THOR AT LOKI SA LUPAIN NG MGA HIGANTE</h3>
-                  <p class="user-follow-info">Isinilaysay ni Justin Carlos G. Villanueva</p>
-              </div>
-              <p class="description">100 ❤️</p>
-          </div>
-          <a href="#" class="button">Buod</a>
-      </div>
-      <div class="box" data-likes="300" data-views="1500000">
-        <h5>1.5M Reads</h5>
-        <div class="box-top">
-            <img class="box-image" src="Cupid at pysche.png" alt="CUPID AT PSYCHE">
-            <div class="title-flex">
-                <h3 class="box-title">CUPID AT PSYCHE</h3>
-                <p class="user-follow-info">Isinalin sa Filipino ni Alvin D. Mangaoang</p>
-            </div>
-            <p class="description">300 ❤️</p>
-        </div>
-        <a href="Genre Details.html" class="button">Buod</a>
-    </div>
-    <!-- Card 2 -->
-    <div class="box" data-likes="200" data-views="1000000">
-        <h5>1M Reads</h5>
-        <div class="box-top">
-            <img class="box-image" src="Liongo.png" alt="Liongo">
-            <div class="title-flex">
-                <h3 class="box-title">LIONGO</h3>
-                <p class="user-follow-info">Isinalin sa Filipino ni Roderic P. Urgellers</p>
-            </div>
-            <p class="description">200 ❤️</p>
-        </div>
-        <a href="#" class="button">Buod</a>
-    </div>
-    <!-- Card 3 -->
-    <div class="box" data-likes="100" data-views="500000">
-        <h5>500K Reads</h5>
-        <div class="box-top">
-            <img class="box-image" src="thor at loki.png" alt="THOR AT LOKI SA LUPAIN NG MGA HIGANTE">
-            <div class="title-flex">
-                <h3 class="box-title">THOR AT LOKI SA LUPAIN NG MGA HIGANTE</h3>
-                <p class="user-follow-info">Isinilaysay ni Justin Carlos G. Villanueva</p>
-            </div>
-            <p class="description">100 ❤️</p>
-        </div>
-        <a href="#" class="button">Buod</a>
-    </div>
-    <div class="box" data-likes="300" data-views="1500000">
-      <h5>1.5M Reads</h5>
-      <div class="box-top">
-          <img class="box-image" src="Cupid at pysche.png" alt="CUPID AT PSYCHE">
-          <div class="title-flex">
-              <h3 class="box-title">CUPID AT PSYCHE</h3>
-              <p class="user-follow-info">Isinalin sa Filipino ni Alvin D. Mangaoang</p>
-          </div>
-          <p class="description">300 ❤️</p>
-      </div>
-      <a href="Genre Details.html" class="button">Buod</a>
-  </div>
-  <!-- Card 2 -->
-  <div class="box" data-likes="200" data-views="1000000">
-      <h5>1M Reads</h5>
-      <div class="box-top">
-          <img class="box-image" src="Liongo.png" alt="Liongo">
-          <div class="title-flex">
-              <h3 class="box-title">LIONGO</h3>
-              <p class="user-follow-info">Isinalin sa Filipino ni Roderic P. Urgellers</p>
-          </div>
-          <p class="description">200 ❤️</p>
-      </div>
-      <a href="#" class="button">Buod</a>
-  </div>
-  
         
       </div>
-      <!-- Navigation Buttons -->
     </div>
     <div class="button-container">
       <img src="left.png" alt="Slide Left" class="slide-btn left-btn">
@@ -519,61 +411,7 @@ transform: scale(0.95);
   </div>
 </footer>
 
-
-  <script>
-const wrap = document.querySelector('.wrap');
-const leftBtn = document.querySelector('.left-btn');
-const rightBtn = document.querySelector('.right-btn');
-
-let currentTranslate = 0;
-const cardWidth = 324; // Card width including gap (300px width + 24px gap)
-const totalCards = wrap.children.length;
-const maxTranslate = -(cardWidth * (totalCards - 1)); // Maximum slide distance
-
-leftBtn.addEventListener('click', () => {
-    currentTranslate = Math.min(currentTranslate + cardWidth, 0); // Slide to the right but not beyond the first card
-    wrap.style.transform = `translateX(${currentTranslate}px)`; // Use backticks for template literals
-});
-
-rightBtn.addEventListener('click', () => {
-    currentTranslate = Math.max(currentTranslate - cardWidth, maxTranslate); // Slide to the left but not beyond the last card
-    wrap.style.transform = `translateX(${currentTranslate}px)`; // Use backticks for template literals
-});
-
-// Select the dropdown elements for likes and views
-const likesFilter = document.getElementById('likesFilter');
-const viewsFilter = document.getElementById('viewsFilter');
-const cards = document.querySelectorAll('.box'); // Select all cards
-
-// Function to filter cards based on selected likes and views
-function filterCards() {
-    const selectedLikes = likesFilter.value;
-    const selectedViews = viewsFilter.value;
-
-    cards.forEach(card => {
-        const cardLikes = parseInt(card.getAttribute('data-likes')); // Get likes as a number
-        const cardViews = parseInt(card.getAttribute('data-views')); // Get views as a number
-
-        // Determine if the card matches the selected filters
-        const likesMatch = selectedLikes === 'all' || cardLikes === parseInt(selectedLikes);
-        const viewsMatch = selectedViews === 'all' || cardViews === parseInt(selectedViews);
-
-        // Show or hide the card based on the filter match
-        if (likesMatch && viewsMatch) {
-            card.style.display = 'flex'; // Show the card
-        } else {
-            card.style.display = 'none'; // Hide the card
-        }
-    });
-}
-
-// Event listeners for the filters
-likesFilter.addEventListener('change', filterCards);
-viewsFilter.addEventListener('change', filterCards);
-
-// Ensure all cards are visible on page load
-filterCards();
-</script>
+<script type="module" src="mitolohiya_page.js"></script>
 
 </body>
 </html>
