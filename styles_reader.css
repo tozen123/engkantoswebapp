@@ -98,3 +98,58 @@ body {
 .home-button:hover {
     background-color: #a84300;
 }
+.container {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .rating-box {
+    background-color: #393939;
+    border-radius: 8px;
+    padding: 20px 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .title {
+    color: #f1d8b1;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .hearts {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .heart {
+    color: #e58d82;
+    font-size: 2rem;
+    transition: transform 0.2s;
+  }
+
+  .heart:hover {
+    transform: scale(1.2);
+  }
+
+  .subtitle {
+    color: #f1d8b1;
+    font-size: 1rem;
+  }
+
+  .exit-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #e58d82;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .exit-icon span:hover {
+    transform: scale(1.2);
+    transition: transform 0.2s;
+  }
