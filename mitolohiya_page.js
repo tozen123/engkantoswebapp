@@ -79,7 +79,7 @@ function displayBooks(books) {
                     </div>
                     <p class="description">${hearts} ❤️</p>
                 </div>
-                <a href="genre_details.html?bookId=${id}" class="button">Buod</a>
+                <a href="mitolohiya_details.html?bookId=${id}" class="button">Buod</a>
             `;
             cardContainer.appendChild(card);
         }
