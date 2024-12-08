@@ -13,6 +13,7 @@ async function loadBookDetails() {
     const statsElement = document.querySelector('.views-likes');
     const descriptionElement = document.querySelector('.content-text');
     const readBtn = document.querySelector('.btn');
+    const qrSection = document.querySelector('.qr-section img');
 
     if (!bookId) {
         console.error("No bookId provided in the URL.");
@@ -34,6 +35,15 @@ async function loadBookDetails() {
                 statsElement.textContent = `${book.hearts || 0} ❤️ | ${book.reads || 0} 👁️`;
                 descriptionElement.textContent = book.bookDescription || "No description available.";
                 
+                // Update QR code image
+                if (book.QrCode) {
+                    qrSection.src = book.QrCode;
+                    qrSection.alt = `${book.name} QR Code`;
+                } else {
+                    qrSection.style.display = "none"; // Hide QR code section if no QR code is available
+                }
+
+                // Update read button
                 if (book.bookPdf) {
                     readBtn.addEventListener('click', (e) => {
                         e.preventDefault();
@@ -42,7 +52,6 @@ async function loadBookDetails() {
                 } else {
                     readBtn.style.display = "none"; // Hide the button if no PDF is available
                 }
-
             });
         } else {
             console.error("No book found with the provided bookId.");
@@ -53,6 +62,9 @@ async function loadBookDetails() {
         mainContentTitle.textContent = "Error loading book details.";
     }
 }
+
+
+
 
 // Call the function when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', loadBookDetails);
