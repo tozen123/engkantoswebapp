@@ -132,3 +132,4 @@ async function fetchBikolBooks() {
 
 // Call fetchBikolBooks once the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", fetchBikolBooks);
+
