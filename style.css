@@ -195,8 +195,45 @@ gap: 24px;
 padding: 24px;
 border-radius: 10px;
 margin: 0 10%;
-padding: 20px;
 
+}
+
+.best_section{
+  z-index: 9999;
+}
+@media (max-width: 480px) {
+  .wrap {
+    max-width: fit-content;
+    padding: 0px;
+    z-index: -1;
+    max-height: 500px;
+    overflow-y : scroll;
+  }
+  .wrapper{
+    max-width: fit-content;
+
+
+    max-height: 400px;
+
+
+    overflow-y : scroll;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 24px;
+    border-radius: 10px;
+    margin: 0 10%;
+      
+  }
+  .best_section {
+    background-color: white;
+  }
+  .button-container{
+    display: none !important;
+  }
 }
 
 
@@ -705,6 +742,57 @@ line-height: 1.6;
 
 
 
+/* For tablets and smaller devices */
+@media (max-width: 768px) {
+  .mitolohiya-section .content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .mitolohiya-section .left-section,
+  .mitolohiya-section .right-section {
+    flex: unset;
+    width: 100%;
+  }
+
+  .mitolohiya-section .title {
+    font-size: 2.5rem;
+  }
+
+  .mitolohiya-section .subtitle {
+    font-size: 1rem;
+  }
+
+  .mitolohiya-section .description {
+    font-size: 0.9rem;
+  }
+}
+
+/* For small phones and extra small devices */
+@media (max-width: 480px) {
+  .mitolohiya-section {
+    padding: 40px 10px;
+  }
+
+  .mitolohiya-section .title {
+    font-size: 2rem;
+  }
+
+  .mitolohiya-section .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .mitolohiya-section .button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .mitolohiya-section .description {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+}
 
 /* Spinner for wrapper */
 .loading-spinner {

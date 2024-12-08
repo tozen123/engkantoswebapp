@@ -28,7 +28,7 @@ searchResultsContainer.style.zIndex = '1000';
 searchInput.addEventListener('focus', () => {
     const rect = searchInput.getBoundingClientRect();
     searchResultsContainer.style.top = `${rect.bottom + window.scrollY}px`;
-    searchResultsContainer.style.left = `${rect.left + 50}px`;
+    searchResultsContainer.style.left = `${rect.left + 10}px`;
 });
 
 // Fetch books from Firestore

@@ -114,9 +114,17 @@ async function fetchBikolBooks() {
                 <div class="info">
                     <h1>${book.name}</h1>
                     <p>Isinalin ni ${book.author}</p>
-                    <button onclick="openBook('${book.bookPdf}')">Read More</button>
+                    <button class="buttonRead">Read More</button>
                 </div>
             `;
+
+            // Add event listener for the "Read More" button
+            const button = card.querySelector('.buttonRead'); // Corrected to `card`
+            button.addEventListener('click', async (e) => {
+                e.preventDefault(); // Prevent default behavior
+                await incrementReads(docSnapshot.id); // Increment reads count
+                window.location.href = `mitolohiya_details.html?bookId=${docSnapshot.id}`; // Redirect to the details page
+            });
 
             // Append the card to the container
             bikolBooksContainer.appendChild(card);
@@ -128,8 +136,6 @@ async function fetchBikolBooks() {
         loadingSpinner.style.display = "none";
     }
 }
-
-
 // Call fetchBikolBooks once the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", fetchBikolBooks);
 

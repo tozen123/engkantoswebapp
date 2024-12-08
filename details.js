@@ -31,7 +31,7 @@ async function loadBookDetails() {
 
             document.querySelector('.right-column .title').textContent = book.name;
             document.querySelector('.right-column .author').textContent = `Isinalin sa Filipino ni ${book.author}`;
-            document.querySelector('.right-column .description').textContent = book.description;
+            document.querySelector('.buod').textContent = book.buod;
 
             const downloadBtn = document.querySelector('.buttons .button');
             const readBtn = document.querySelector('.buttons .read-btn');
