@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
-import { getFirestore, collection, query, where, getDocs, doc, getDoc, addDoc}  from "https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js";
+import { getFirestore, collection, query, where, getDocs, addDoc } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js";
 import { firebaseConfig } from './config.js';
 
 const app = initializeApp(firebaseConfig);
@@ -8,6 +8,7 @@ const db = getFirestore(app);
 const params = new URLSearchParams(window.location.search);
 const bookId = params.get('bookId');
 
+// Load Book Details
 async function loadBookDetails() {
     const mainContentTitle = document.querySelector('.main-content h1');
     const statsElement = document.querySelector('.views-likes');
@@ -34,7 +35,7 @@ async function loadBookDetails() {
                 mainContentTitle.textContent = book.name || "No Title";
                 statsElement.textContent = `${book.hearts || 0} ❤️ | ${book.reads || 0} 👁️`;
                 descriptionElement.textContent = book.bookDescription || "No description available.";
-                
+
                 // Update QR code image
                 if (book.QrCode) {
                     qrSection.src = book.QrCode;
@@ -63,16 +64,11 @@ async function loadBookDetails() {
     }
 }
 
-
-
-
-// Call the function when the DOM is fully loaded
-document.addEventListener('DOMContentLoaded', loadBookDetails);
-// Function to load comments from Firestore
+// Load Comments
 async function loadComments() {
-    const commentsContainer = document.querySelector('.comments');
+    const commentsContainer = document.querySelector('.comment-section-comments');
     const commentsCount = document.getElementById('comment');
-    
+
     if (!bookId) {
         console.error("No bookId provided in the URL.");
         return;
@@ -89,16 +85,12 @@ async function loadComments() {
             querySnapshot.forEach((doc) => {
                 const comment = doc.data();
 
-                let published = `
-                    <div class="parents">
-                        <img src="${comment.userImage}">
+                const published = `
+                    <div class="comment-section-parents">
+                        <img src="${comment.userImage}" alt="User">
                         <div>
                             <h1>${comment.userName}</h1>
                             <p>${comment.message}</p>
-                            <div class="engagements">
-                                <img src="like.png">
-                                <img src="share.png">
-                            </div>
                             <span class="date">${comment.date}</span>
                         </div>
                     </div>`;
@@ -114,21 +106,14 @@ async function loadComments() {
         console.error("Error loading comments:", error);
     }
 }
-async function addComment() {
-    const userCommentElement = document.querySelector(".usercomment");
-    if (!userCommentElement) {
-        console.error("Element '.usercomment' not found.");
-        return;
-    }
 
-    const userComment = userCommentElement.value; // Ensure no extra spaces
-    const userName = document.querySelector(".user")?.value.trim() || "Anonymous";
+// Add Comment
+async function addComment() {
+    const userCommentElement = document.querySelector(".comment-section-user-comment");
+    const userName = document.querySelector(".comment-section-user")?.value.trim() || "Anonymous";
     const userImage = userName === "Anonymous" ? "anonymous.png" : "user_4_fill.png";
 
-    console.log("User Comment:", userComment);
-    console.log("Book ID:", bookId);
-
-    if (!userComment) {
+    if (!userCommentElement.value) {
         console.error("User comment is empty. Please add a comment.");
         return;
     }
@@ -142,11 +127,9 @@ async function addComment() {
         bookId: bookId,
         userName: userName,
         userImage: userImage,
-        message: userComment,
+        message: userCommentElement.value,
         date: new Date().toLocaleString(),
     };
-
-    console.log("Comment Data to Add:", commentData);
 
     try {
         await addDoc(collection(db, 'comments'), commentData);
@@ -158,13 +141,11 @@ async function addComment() {
     }
 }
 
+// Event Listeners
+document.getElementById("publish_comment").addEventListener("click", addComment);
 
-
-
-// Event listener for the publish button
-document.getElementById("publish_comment").addEventListener("click", () => {
-    addComment();
+// Load book details and comments on page load
+document.addEventListener("DOMContentLoaded", () => {
+    loadBookDetails();
+    loadComments();
 });
-
-// Load comments when the page is fully loaded
-document.addEventListener("DOMContentLoaded", loadComments);
