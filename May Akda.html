@@ -38,6 +38,7 @@
   flex-wrap: wrap;
   margin: 40px 50px;
   justify-content: flex-end; /* Align the author cards to the right */
+  
 }
 
 .author-card {
@@ -206,6 +207,16 @@
     align-items: flex-start;
 }
 
+
+/* For extra small screens */
+@media (max-width: 480px) {
+  #unique-author-info-container{
+    z-index: 9999;
+  }
+  section{
+    height: 50%;
+  }
+}
     </style>
 </head>
 <body>
@@ -233,12 +244,13 @@
       <section>
         <h1 class="title" class="fa fa-user" >May-Akda</h1>
          <!-- Unique Info Container -->
-  <div id="unique-author-info-container" >
-    <h2 id="unique-author-name">xvxvdfgdfg</h2>
-    <p id="unique-author-description">dfgdfgdfgdfgdf</p>
+    <!-- Info Container -->
+  <div id="unique-author-info-container">
+    <h2 id="unique-author-name">Author Name</h2>
+    <p id="unique-author-description">Author Description</p>
   </div>
         <div class="author-cards-container">
-          <div class="author-card">
+          <div class="author-card" data-id="1">
             <div class="author-content">
               <div class="author-imgBx">
                 <img src="KRISTINE A. PURGANAN. PURGANAN. PURGANAN" alt="Author Image">
@@ -258,7 +270,7 @@
             </ul>
           </div>
       
-          <div class="author-card">
+          <div class="author-card" data-id="2">
             <div class="author-content">
               <div class="author-imgBx">
                 <img src="DANICA C. SAMAN. SAMAN. SAMAN" alt="Author Image">
@@ -277,7 +289,7 @@
             </ul>
           </div>
       
-          <div class="author-card">
+          <div class="author-card" data-id="3">
             <div class="author-content">
               <div class="author-imgBx">
                 <img src="TAGAPAYO.jfif" alt="Author Image">
@@ -338,78 +350,11 @@
 <script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js"></script>
 
 <script type="module" src="scripts.js"></script>
+<script type="module" src="akdaInfoScript.js"></script>
 <script type="module" src="searchScript.js"></script>
 
 
 
-
-  <script>
-    const wrap = document.querySelector('.wrap');
-  const leftBtn = document.querySelector('.left-btn');
-  const rightBtn = document.querySelector('.right-btn');
-
-  let currentTranslate = 0;
-  const cardWidth = 324; // Card width including gap (300px width + 24px gap)
-  const totalCards = wrap.children.length;
-  const maxTranslate = -(cardWidth * (totalCards - 1)); // Maximum slide distance
-
-  leftBtn.addEventListener('click', () => {
-      currentTranslate = Math.min(currentTranslate + cardWidth, 0); // Slide to the right but not beyond the first card
-      wrap.style.transform = `translateX(${currentTranslate}px)`;
-  });
-
-  rightBtn.addEventListener('click', () => {
-      currentTranslate = Math.max(currentTranslate - cardWidth, maxTranslate); // Slide to the left but not beyond the last card
-      wrap.style.transform = `translateX(${currentTranslate}px)`;
-  });
-// Select all author cards
-document.querySelectorAll('.author-card').forEach((card, index) => {
-  card.addEventListener('click', () => {
-    // Define author data
-    const authorData = [
-      {
-        name: "KRISTINE A. PURGANAN",
-        description: "Magandang Buhay! Ako si Kristine A. Purganan. Isa sa mga nagpapakadalubhasa sa asignaturang Filipino at isa rin tagapaglikha ng e-kagamitang pantulong na ito."
-      },
-      {
-        name: "DANICA C. SAMAN",
-        description: "Mapagpalang Araw! Ako si Danica C. SAMAN, isa sa mga nagpapakadalubhasa sa Filipino at ang tagapaglikha ng e-kagamitang pantulong na ito."
-      },
-      {
-        name: "EDWIN R. ICHIANO, PhD",
-        description: "Ako si Edwin R. Ichiano, PhD, ang inyong tagapayo sa proyektong ito. Hangad kong makatulong ang gawaing ito sa inyong pag-aaral at mas makilala ang ating kultura."
-      }
-    ];
-
-    // Get the unique info container elements
-    const infoContainer = document.getElementById('unique-author-info-container');
-    const authorName = document.getElementById('unique-author-name');
-    const authorDescription = document.getElementById('unique-author-description');
-
-    // Ensure all elements exist
-    if (!infoContainer || !authorName || !authorDescription) {
-      console.error("Author info container or child elements are missing.");
-      return;
-    }
-
-    // Check if the index is valid
-    if (index < authorData.length) {
-      // Update the container with the selected author's info
-      authorName.textContent = authorData[index].name;
-      authorDescription.textContent = authorData[index].description;
-
-      // Make the container visible
-      infoContainer.style.display = 'block';
-    } else {
-      console.error("Author data not found for this card.");
-    }
-  });
-});
-
-
-
-
-</script>
 
 </body>
 </html>
