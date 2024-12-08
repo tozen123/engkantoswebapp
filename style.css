@@ -207,7 +207,7 @@ flex-direction: column;
 flex-basis: 90%;
 position: relative;
 padding: 24px;
-height: 520px;
+height: 490px;
 width: 288px;
 background: #98B480;
 border-radius: 10px;
@@ -603,7 +603,7 @@ border-radius: 5px;
 border: 0;
 height: 3px;
 background: #fff;
-width: 1550px;
+width: 95%;
 }
 
 .row p {

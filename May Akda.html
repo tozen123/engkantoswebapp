@@ -125,6 +125,7 @@
   transform: translateY(40px);
   transition: 0.5s;
   transition-delay: calc(0.1s * var(--i));
+  z-index: 2;
 }
 
 .author-card:hover .author-sci li {
@@ -189,6 +190,22 @@
       line-height: 1.5;
       margin: 20px 0;
     }
+    #unique-author-info-container {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  padding: 20px;
+  color: white;
+  display: flex;
+    width: 100%;
+    height: 49%;
+    flex-direction: column;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
     </style>
 </head>
 <body>
@@ -215,12 +232,11 @@
       </div>
       <section>
         <h1 class="title" class="fa fa-user" >May-Akda</h1>
-        <div class="author-info">
-            <h1>Magandang Buhay! </h1>
-            <p>Ako si Danica C. Saman. Isa sa mga nagpapakadalubhasa sa asignaturang Filipino at isa rin  tagapaglikha ng e-kagamitang pantulong na ito. Hangad kong makatulong sa iyo ang ENGKANTO na naglalaman ng mga mitolohiyang pinag-aaralan sa ika-sampung baitang. Bukas-palad naming tatanggapin ang anumang suhestiyon o katanungan. Hanggang sa muli!
-            </p>
-          </div>
-    
+         <!-- Unique Info Container -->
+  <div id="unique-author-info-container" >
+    <h2 id="unique-author-name">xvxvdfgdfg</h2>
+    <p id="unique-author-description">dfgdfgdfgdfgdf</p>
+  </div>
         <div class="author-cards-container">
           <div class="author-card">
             <div class="author-content">
@@ -233,7 +249,7 @@
             </div>
             <ul class="author-sci">
               <li style="--i:1">
-                <a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
               </li>
               <li style="--i:2">
                 <a href="https://www.facebook.com/kristine.purganan.14?mibextid=ZbWKwL
@@ -253,7 +269,7 @@
             </div>
             <ul class="author-sci">
               <li style="--i:1">
-                <a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
               </li>
               <li style="--i:2">
                 <a href="https://www.facebook.com/danica.saman?mibextid=LQQJ4d"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -345,6 +361,53 @@
       currentTranslate = Math.max(currentTranslate - cardWidth, maxTranslate); // Slide to the left but not beyond the last card
       wrap.style.transform = `translateX(${currentTranslate}px)`;
   });
+// Select all author cards
+document.querySelectorAll('.author-card').forEach((card, index) => {
+  card.addEventListener('click', () => {
+    // Define author data
+    const authorData = [
+      {
+        name: "KRISTINE A. PURGANAN",
+        description: "Magandang Buhay! Ako si Kristine A. Purganan. Isa sa mga nagpapakadalubhasa sa asignaturang Filipino at isa rin tagapaglikha ng e-kagamitang pantulong na ito."
+      },
+      {
+        name: "DANICA C. SAMAN",
+        description: "Mapagpalang Araw! Ako si Danica C. SAMAN, isa sa mga nagpapakadalubhasa sa Filipino at ang tagapaglikha ng e-kagamitang pantulong na ito."
+      },
+      {
+        name: "EDWIN R. ICHIANO, PhD",
+        description: "Ako si Edwin R. Ichiano, PhD, ang inyong tagapayo sa proyektong ito. Hangad kong makatulong ang gawaing ito sa inyong pag-aaral at mas makilala ang ating kultura."
+      }
+    ];
+
+    // Get the unique info container elements
+    const infoContainer = document.getElementById('unique-author-info-container');
+    const authorName = document.getElementById('unique-author-name');
+    const authorDescription = document.getElementById('unique-author-description');
+
+    // Ensure all elements exist
+    if (!infoContainer || !authorName || !authorDescription) {
+      console.error("Author info container or child elements are missing.");
+      return;
+    }
+
+    // Check if the index is valid
+    if (index < authorData.length) {
+      // Update the container with the selected author's info
+      authorName.textContent = authorData[index].name;
+      authorDescription.textContent = authorData[index].description;
+
+      // Make the container visible
+      infoContainer.style.display = 'block';
+    } else {
+      console.error("Author data not found for this card.");
+    }
+  });
+});
+
+
+
+
 </script>
 
 </body>
