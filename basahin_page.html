@@ -7,6 +7,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
   <style>
+    html, body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #272727;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
     /* Navbar styles */
     .navbar {
       background-color: #2B632B;
@@ -76,7 +84,7 @@
       padding: 50px 20px;
       border-radius: 10px;
       position: relative;
-      z-index: -1;
+      z-index: 1;
     }
 
     .main-content h1 {
@@ -154,9 +162,13 @@
 
     /* QR Code Section */
     .qr-section {
-      text-align: center;
-      margin-top: 20px;
-      color: #555;
+    display: flex;
+    text-align: end;
+    margin-top: 20px;
+    color: #555;
+    flex-direction: row-reverse;
+    align-content: center;
+    align-items: center;
     }
 
     .qr-section img {
@@ -235,149 +247,118 @@
       border-top: 1px solid rgba(186, 186, 186, 0.37);
       margin: 20px 0;
     }
-    .container {
-  background: #fff;
-  padding: 20px;
-  font-family: monospace;
-  width: 900px;
-  box-shadow: 0 0 5px #000;
+    .comment-section-container {
+    background: #fff;
+    padding: 20px;
+    font-family: monospace;
+    width: 900px;
+    box-shadow: 0 0 5px #000;
 }
 
-.head {
-  text-transform: uppercase;
+.comment-section-head {
+    text-transform: uppercase;
 }
 
-.text {
-  margin: 10px 0;
-  font-family: sans-serif;
-  font-size: 0.9em;
+.comment-section-comments {
+    margin-top: 10px;
 }
 
-.commentbox {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px;
+.comment-section-box {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
 }
-.commentbox > img {
-  width: 40px;
+
+.comment-section-box > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.comment-section-content {
+    width: 100%;
+    flex: 1;
+}
+
+.comment-section-user {
+    border: none;
+    outline: none;
+    margin: 5px 0;
+    color: #808080;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.comment-section-input > input {
+    border: none;
+    padding: 10px;
+    padding-left: 0;
+    outline: none;
+    border-bottom: 2px solid #1E4D28;
+    margin-bottom: 10px;
+    width: 95%;
+}
+
+.comment-section-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1E4D28;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    border: 2px solid transparent;
+    transition: background 0.3s, border 0.3s, color 0.3s;
+}
+
+.comment-section-buttons button.abled {
+    background-color: rgba(43, 99, 43, 1);
+    border: 2px solid #2B632B;
+    color: #FAE7CB;
+}
+
+.comment-section-buttons > button {
+    padding: 5px 10px;
+    background: lightgrey;
+    color: #808080;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.comment-section-policy {
+    margin: 20px 0;
+    font-size: 0.8em;
+    font-family: Arial, sans-serif;
+    color: #808080;
+}
+
+.comment-section-policy a {
+    text-decoration: none;
+    color: blue;
+}
+
+.comment-section-notify {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.comment-section-notify > input {
+    margin-right: 5px;
+}
+.comment-section-parents {
+    display: flex;
+}
+.comment-section-parents img{
   height: 40px;
-  border-radius: 50%;
-  margin-right: 20px;
-  object-fit: cover;
-  object-position: center;
+  margin-top: 15px;
 }
-
-.content {
-  width: 100%;
-}
-.user {
-  border: none;
-  outline: none;
-  margin: 5px 0;
-  color: #808080;
-  margin-left: 20px;
-  padding: 10px;
-}
-
-.commentinput > input {
-  border: none;
-  padding: 10px;
-  padding-left: 0;
-  outline: none;
-  border-bottom: 2px solid blue;
-  margin-bottom: 10px;
-  width: 95%;
-}
-.buttons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-      color: #FAE7CB;
-      text-decoration: none;
-      border-radius: 20px;
-      font-weight: bold;
-      border: 2px solid transparent;
-      transition: background 0.3s, border 0.3s, color 0.3s;
-}
-.buttons button.abled {
-    background-color: rgba(250, 231, 203, 0.51);
-      border: 2px solid #FAE7CB;
-      color: #2B632B;
-}
-
-
-.buttons > button {
-  padding: 5px 10px;
-  background: lightgrey;
-  color: #808080;
-  text-transform: uppercase;
-  border: none;
-  outline: none;
-  border-radius: 3px;
-  cursor: pointer;
-}
-.policy {
-  margin: 20px 0;
-  font-size: 0.8em;
-  font-family: Arial, sans-serif;
-  color: #808080;
-}
-
-.policy a {
-  text-decoration: none;
-  color: blue;
-}
-
-.notify {
-  margin-right: 10px;
-  display: flex;
-  align-items: center;
-}
-
-.notify > input {
-  margin-right: 5px;
-}
-.parents {
-  font-family: Arial, sans-serif;
-  display: flex;
-  margin-bottom: 30px;
-}
-
-.parents h1 {
-  font-size: 0.9em;
-}
-.parents p {
-  margin: 10px 0;
-  font-size: 0.9em;
-}
-
-.parents > img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 20px;
-  object-fit: cover;
-  object-position: center;
-}
-.engagements {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.engagements img {
-  width: 20px;
-}
-.engagements img:nth-child(1) {
-  margin-right: 10px;
-  width: 25px;
-}
-
-.date {
-  color: #808080;
-  font-size: 0.8em;
-}
-
   </style>
 </head>
 <body>
@@ -402,55 +383,57 @@
     <h1>Loading...</h1>
     <div class="views-likes" id="book-stats">Loading stats...</div>
   </div>
-
+<div class="sub-content">
+    <p style="align-items: center; justify-content: center;" >Paunang tingin</p>
+    <hr>
+    <p class="content-text">
+      </p>
+      <a href="#" class="btn">Basahin ang buong kwento ></a>
+      <div class="comment-section-container">
+        <div class="comment-section-head">
+            <h1>Mag-iwan ng komento</h1>
+        </div>
+    
+        <div>
+            <span id="comment">0</span> Komento
+        </div>
+        <div class="comment-section-comments"></div>
+    
+        <div class="comment-section-box">
+            <img src="user_4_fill.png" alt="">
+            <div class="comment-section-content">
+                <h2>Mag komento bilang:</h2>
+                <input type="text" value="Anonymous" class="comment-section-user">
+    
+                <div class="comment-section-input">
+                    <input type="text" placeholder="Enter comment" class="comment-section-user-comment">
+                    <div class="comment-section-buttons">
+                        <button type="submit" disabled id="publish_comment">Publish</button>
+                        <div class="comment-section-notify">
+                            <input type="checkbox" class="comment-section-notify-input">
+                            <span>Notify me</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="comment-section-policy">
+                    This site is protected by reCAPTCHA and the Google 
+                    <a href="">privacy policy</a> and 
+                    <a href="">Terms of Service</a>apply.
+                </p>
+            </div>
+        </div>
+    </div>
+    
       
 
       <!-- QR Code Section -->
       <div class="qr-section">
         <img src="qr.png" alt="QR Code">
+        <h6>I-scan ang QR code upang maibahagi ito sa mga kaibigan</h6>
       </div>
     
 </div>
-<div class="sub-content">
-  <p style="align-items: center; justify-content: center;" >Paunang tingin</p>
-  <hr>
-  <p class="content-text">
-    </p>
-    <a href="#" class="btn">Basahin ang buong kwento ></a>
-    <div class="container">
-          <div class="head">
-          <h1>Mag-iwan ng komento</h1>
-          </div>
-      
-          <div>
-          <span id="comment">0</span> Komento
-          </div>
-          <div class="comments"></div>
-      
-          <div class="commentbox">
-          <img src="user_4_fill.png" alt="">
-          <div class="content">
-              <h2>Mag komento bilang:</h2>
-              <input type="text" value="Anonymous" class="user">
-      
-              <div class="commentinput">
-              <input type="text" placeholder="Enter comment" class="usercomment">
-              <div class="buttons">
-                  <button type="submit" disabled  id="publish_comment">Publish</button>
-                  <div class="notify">
-                  <input type="checkbox" class="notifyinput">
-                  <span>Notify me</span>
-                  </div>
-              </div>
-              </div>
-              <p class="policy">
-                  This site is protected by reCAPTCHA and the Google 
-                  <a href="">privacy policy</a> and 
-                  <a href="">Terms of Service</a>apply.
-                </p>
-          </div>
-          </div>
-      </div>
+  
   <!-- Related Section -->
   
 
@@ -509,61 +492,49 @@ const userId = {
   message: null,
   date: null
 };
-
-const userComment = document.querySelector(".usercomment");
+const userComment = document.querySelector(".comment-section-user-comment");
 const publishBtn = document.querySelector("#publish_comment");
-const comments = document.querySelector(".comments");
-const userName = document.querySelector(".user");
+const comments = document.querySelector(".comment-section-comments");
+const userName = document.querySelector(".comment-section-user");
 
-userComment.addEventListener("input", e => {
-  if (!userComment.value) {
-    publishBtn.setAttribute("disabled", "disabled");
-    publishBtn.classList.remove("abled");
-  } else {
-    publishBtn.removeAttribute("disabled");
-    publishBtn.classList.add("abled")
-  }
+userComment.addEventListener("input", () => {
+    if (!userComment.value) {
+        publishBtn.setAttribute("disabled", "disabled");
+        publishBtn.classList.remove("abled");
+    } else {
+        publishBtn.removeAttribute("disabled");
+        publishBtn.classList.add("abled");
+    }
 });
 
 function addPost() {
-  console.log("The button works!");
-  if (!userComment.value) return;
+    if (!userComment.value) return;
 
-  userId.name = userName.value;
+    const userId = {
+        name: userName.value,
+        identity: userName.value !== "Anonymous",
+        image: userName.value === "Anonymous" ? "anonymous.png" : "user_4_fill.png",
+        message: userComment.value,
+        date: new Date().toLocaleString(),
+    };
 
-  if (userId.name === "Anonymous") {
-    userId.identity = false;
-    userId.image = "anonymous.png";
-  } else {
-    userId.identity = true;
-    userId.image = "user_4_fill.png";
-  }
+    const published = `
+        <div class="comment-section-parents">
+            <img src="${userId.image}">
+            <div>
+                <h1>${userId.name}</h1>
+                <p>${userId.message}</p>
+                <span class="date">${userId.date}</span>
+            </div>
+        </div>`;
+    comments.innerHTML += published;
 
-  userId.message = userComment.value;
-  userId.date = new Date().toLocaleString();
-
-  let published = `
-    <div class="parents">
-  <img src="${userId.image}">
-  <div>
-    <h1>${userId.name}</h1>
-    <p>${userId.message}</p>
-    <div class="engagements">
-      <img src="like.png">
-      <img src="share.png">
-    </div>
-    <span class="date">${userId.date}</span>
-  </div>
-</div>`;
-comments.innerHTML += published;
-
-let commentsNum = document.querySelectorAll(".parents").length;
-document.getElementById("comment").textContent = commentsNum;
-
+    const commentsNum = document.querySelectorAll(".comment-section-parents").length;
+    document.getElementById("comment").textContent = commentsNum;
 }
 
+publishBtn.addEventListener("click", addPost);
 
-publishBtn.addEventListener("click",addPost)
 </script>
 </body>
 </html>
