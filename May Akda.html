@@ -222,11 +222,18 @@ section{
 
 /* For extra small screens */
 @media (max-width: 480px) {
+
+  .author-card {
+    width: 200px;
+  }
   #unique-author-info-container{
     z-index: 9999;
+    width: 90%;
+    position: relative;
+    height: 15%;
   }
   section{
-    height: auto;
+    height: 1000px;
   }
   .title{
     font-size: 40px;
@@ -241,12 +248,12 @@ section{
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
-    margin: 40px 50px;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: row;
     height: 100% ;
     align-content: center;
-    width: 100%;
+    overflow-x: scroll;
+    padding: 5%;
 }
 
 
