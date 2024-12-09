@@ -153,3 +153,19 @@ body {
     transform: scale(1.2);
     transition: transform 0.2s;
   }
+  @media (max-width: 768px) {.pdf-viewer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;s
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
+    align-items: stretch;
+    justify-content: flex-start;
+    align-content: center;
+    flex-wrap: nowrap;
+}}
+  
