@@ -82,7 +82,6 @@
       color: white;
       text-align: center;
       padding: 50px 20px;
-      border-radius: 10px;
       position: relative;
       z-index: 1;
     }
@@ -372,15 +371,30 @@
     width: 100%;
 }
 .navbar {
-    background-color: #2B632B;
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 10px 20px;
+        font-family: Arial, sans-serif;
+        height: auto;
+        align-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        
+    }
+    .navbar .nav-links {
+    margin-top: 5px;
+    gap: 20px !important;
+}
+.navbar .search-bar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    font-family: Arial, sans-serif;
-    height: auto;
-    flex-direction: column;
-    align-content: center;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 5px;
+    width: 100%;
+}
 }
 .logo {
     margin-bottom: 2px;
@@ -388,6 +402,7 @@
 .navbar .nav-links {
     display: flex;
     gap: 40px;
+    
 }
 .navbar .search-bar {
     margin-top: 10px;
@@ -402,7 +417,10 @@
     align-items: center;
     
 }
+.sub-content .btn {
+    width: 100%;
 }
+
   </style>
 </head>
 <body>
@@ -453,17 +471,10 @@
                     <input type="text" placeholder="Enter comment" class="comment-section-user-comment">
                     <div class="comment-section-buttons">
                         <button type="submit" disabled id="publish_comment">Publish</button>
-                        <div class="comment-section-notify">
-                            <input type="checkbox" class="comment-section-notify-input">
-                            <span>Notify me</span>
-                        </div>
+                        
                     </div>
                 </div>
-                <p class="comment-section-policy">
-                    This site is protected by reCAPTCHA and the Google 
-                    <a href="">privacy policy</a> and 
-                    <a href="">Terms of Service</a>apply.
-                </p>
+              
             </div>
         </div>
     </div>
@@ -520,7 +531,7 @@
         </div>
         <hr class="divider">
         <div class="row">
-            <p>© 2024 Engkantos. All rights reserved</p>
+            <p>© 2024 Engkanto. All rights reserved</p>
         </div>
     </div>
 </footer>

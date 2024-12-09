@@ -198,15 +198,27 @@
   padding: 20px;
   color: white;
   display: flex;
-    width: 100%;
-    height: 49%;
+    width: 30%;
+    height: 70%;
     flex-direction: column;
     align-content: flex-start;
     flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: flex-start;
 }
-
+#unique-author-name{
+  font-size: 2rem;
+  font-weight: bold;
+}
+#unique-author-description{
+  height: 50px;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #fff;
+}
+section{
+  pad: 20px;
+}
 
 /* For extra small screens */
 @media (max-width: 480px) {
@@ -214,8 +226,45 @@
     z-index: 9999;
   }
   section{
-    height: 50%;
+    height: auto;
   }
+  .title{
+    font-size: 40px;
+  }
+  .title-image {
+    width: 30px;
+    height: auto;
+  }
+  .author-cards-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 40px 50px;
+    justify-content: center;
+    flex-direction: row;
+    height: 100% ;
+    align-content: center;
+    width: 100%;
+}
+
+
+
+}
+/* Styling for Image Above Author Name */
+#unique-author-image {
+  width: 100px;
+    height: 100px;
+
+    margin-bottom: 20px;
+
+    object-fit: cover;
+}
+.title-image {
+  width: 50px; /* Adjust image size */
+  height: auto;
+  border-radius: 10px;
 }
     </style>
 </head>
@@ -242,12 +291,18 @@
         </div>
       </div>
       <section>
-        <h1 class="title" class="fa fa-user" >May-Akda</h1>
+        <h1 class="title" class="fa fa-user" >
+          <img class="title-image" src="user.png" alt="Title Image" />
+          May-Akda</h1>
          <!-- Unique Info Container -->
     <!-- Info Container -->
   <div id="unique-author-info-container">
-    <h2 id="unique-author-name">Author Name</h2>
-    <p id="unique-author-description">Author Description</p>
+    <img src="Black_Grey_Minimalist_Book_Club_Logo-removebg-preview 2.png" alt="Author Image" id="unique-author-image" />
+    <h2 id="unique-author-name" >Kristine A. Purganan</h2>
+    <p id="unique-author-description" >Mapagpalang Araw!
+      Ako si Kristine A. Purganan, isa sa mga nagpapakadalubhasa sa Filipino at ang tagapaglikha ng e-kagamitang pantulong na ito. Nawa’y maging mas kawili-wili ang iyong pagbabasa at pag-aaral ng mga kuwentong mitolohiyang ito. Maraming salamat sa iyong pagbisita, at nawa’y maging kapaki-pakinabang ang paggamit mo ng ENGKANTO!
+      
+      </p>
   </div>
         <div class="author-cards-container">
           <div class="author-card" data-id="1">
@@ -342,7 +397,7 @@
       </div>
       <hr class="divider">
       <div class="row">
-          <p>© 2024 Engkantos. All rights reserved</p>
+          <p>© 2024 Engkanto. All rights reserved</p>
       </div>
   </div>
 </footer>

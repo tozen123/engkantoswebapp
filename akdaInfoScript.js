@@ -2,11 +2,11 @@
 const authorData = {
     1: {
       name: "KRISTINE A. PURGANAN",
-      description: "May-Akda ng 'Pagsibol' at isang bihasang manunulat sa larangan ng panitikang Pilipino."
+      description: "Mapagpalang Araw!Ako si Kristine A. Purganan, isa sa mga nagpapakadalubhasa sa Filipino at ang tagapaglikha ng e-kagamitang pantulong na ito. Nawa’y maging mas kawili-wili ang iyong pagbabasa at pag-aaral ng mga kuwentong mitolohiyang ito. Maraming salamat sa iyong pagbisita, at nawa’y maging kapaki-pakinabang ang paggamit mo ng ENGKANTO!"
     },
     2: {
       name: "DANICA C. SAMAN",
-      description: "May-Akda na nagpakadalubhasa sa pagsusulat ng makabagong kwentong pambata."
+      description: "Magandang Buhay! Ako si Danica C. Saman. Isa sa mga nagpapakadalubhasa sa asignaturang Filipino at isa rin  tagapaglikha ng e-kagamitang pantulong na ito. Hangad kong makatulong sa iyo ang ENGKANTO na naglalaman ng mga mitolohiyang pinag-aaralan sa ika-sampung baitang. Bukas-palad naming tatanggapin ang anumang suhestiyon o katanungan. Hanggang sa muli!"
     },
     3: {
       name: "Edwin R. Ichiano, PhD",
