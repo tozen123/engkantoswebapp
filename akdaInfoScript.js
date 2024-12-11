@@ -10,7 +10,7 @@ const authorData = {
     },
     3: {
       name: "Edwin R. Ichiano, PhD",
-      description: "Tagapayo sa proyekto, may malawak na karanasan sa pananaliksik at edukasyon."
+      description: "Tagapayo"
     }
   };
   
