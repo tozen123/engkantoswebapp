@@ -59,7 +59,7 @@ async function fetchBooks() {
                         <h3 class="box-title">${book.name}</h3>
                         <p class="user-follow-info">Isinalin sa Filipino ni ${book.author}</p>
                     </div>
-                    <p class="description">${book.hearts}</p>
+                    <p class="description">${book.hearts} ❤️ </p>
                 </div>
                 <a href="#" class="button">Buod</a>
             `;
